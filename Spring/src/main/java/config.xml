@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+ 	   xmlns:p="http://www.springframework.org/schema/p"
+ 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	   https://www.springframework.org/schema/beans/spring-beans.xsd
+ 	   http://www.springframework.org/schema/context
+ 	   http://www.springframework.org/schema/context/spring-context.xsd">
+ 	  
+ 	  <!-- This is bean- Setter injection--> 
+ 	   <bean class="com.springcore.Student" name="Student1">
+			<!--using value tag-->
+			<property name="id">
+				<value>101</value>
+			</property>
+			
+			<property name="name">
+				<value>Shristi</value>
+				</property>
+			
+				
+			<property name="address">
+				<value>Delhi</value>
+			</property>
+			
+		</bean>
+		
+		 <!-- This is 2nd bean--> 
+		<bean class="com.springcore.Student" name="Student2">
+			<!-- Using value attribute-->
+			<property name="id" value="102" />
+				
+			<property name="name" value="ABC" />
+			
+			<property name="address" value="GZB" />
+				
+			
+		</bean>
+		
+		<!-- This is 2nd bean--> 
+		<!-- Using p schema-->
+		<bean class="com.springcore.Student" name="Student3" p:id="103" p:name="XYZ" p:address="Lucknow" />
+ 
+ </beans>
+
